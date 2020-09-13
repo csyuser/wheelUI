@@ -1,10 +1,28 @@
 <template>
-  <button class="w-button">你好</button>
+  <button class="w-button" :class="{[`icon-${iconPosition}`]:true}">
+    <svg v-if="icon" class="icon" aria-hidden="true">
+      <use :xlink:href="`#i-${icon}`" />
+    </svg>
+    <div class="content">
+      <slot></slot>
+    </div>
+  </button>
 </template>
 
 
 <script>
-export default {};
+export default {
+  props: {
+    icon:{}, 
+  iconPosition:{
+    type:String,
+    default:'left',
+    validator(value){
+     return (value==='right' || value === 'left')
+    }
+  }
+  },
+};
 </script>
 
 
@@ -17,14 +35,22 @@ export default {};
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   padding: 0 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
   &:hover {
     border: 1px solid var(--border-color-hover);
   }
   &:active {
     background: var(--button-active-bg);
   }
-  &:focus {
-    outline: none;
+  &:focus { outline: none; }
+  > .icon { order: 1; margin-right: .3em;}
+  > .content { order: 2;}
+  &.icon-right {
+    > .icon {order: 2; margin: 0 0 0 .3em;}
+    > .content {order: 1;}
   }
 }
 </style>
