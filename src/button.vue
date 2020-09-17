@@ -1,10 +1,10 @@
 <template>
-  <button class="w-button" :class="{[`icon-${iconPosition}`]:true}">
+  <button class="w-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
 <!--    <svg v-if="icon" class="icon" aria-hidden="true">-->
 <!--      <use :xlink:href="`#i-${icon}`" />-->
 <!--    </svg>-->
-    <w-icon class="icon loading" name="loading"></w-icon>
-    <w-icon class="icon" v-if="icon" :name="icon"></w-icon>
+    <w-icon class="icon loading" name="loading" v-if="loadings"></w-icon>
+    <w-icon class="icon" v-if="icon && !loadings" :name="icon"></w-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -15,14 +15,18 @@
 <script>
 export default {
   props: {
-    icon:{}, 
+    icon:{},
   iconPosition:{
     type:String,
     default:'left',
     validator(value){
      return (value==='right' || value === 'left')
     }
-  }
+  },
+    loadings:{
+      type:Boolean,
+      default: false
+    }
   },
 };
 </script>
