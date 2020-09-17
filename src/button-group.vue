@@ -5,9 +5,17 @@
 
 </template>
 
-<script>
+<script lang="ts">
 export default {
-name: "w-button-group"
+name: "w-button-group",
+  mounted() {
+    for (let node of this.$el.children){
+      let nodeName = node.nodeName.toLowerCase()
+      if (nodeName!='button'){
+        console.warn(`w-button-group下的子元素应该全部是 button 而你写了 ${nodeName}`)
+      }
+    }
+  }
 }
 </script>
 
