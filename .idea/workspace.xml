@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9ed26b-6646-4f64-b493-04566c732732" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/w-icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/w-icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/w-icon.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <workItem from="1598846385537" duration="2324000" />
       <workItem from="1598857002435" duration="955000" />
       <workItem from="1598857965761" duration="6526000" />
-      <workItem from="1600303582179" duration="1812000" />
+      <workItem from="1600303582179" duration="3444000" />
     </task>
     <servers />
   </component>

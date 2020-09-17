@@ -1,6 +1,6 @@
 <template>
-  <svg v-if="icon" class="icon" aria-hidden="true">
-    <use :xlink:href="`#i-${icon}`" />
+  <svg class="g-icon">
+    <use :xlink:href="`#i-${name}`" />
   </svg>
 </template>
 
@@ -8,11 +8,13 @@
 export default {
 name: "w-icon",
   props:{
-    icon:{},
+    name:{},
   }
 }
 </script>
 
 <style scoped>
-.icon { order: 1; margin-right: .3em;}
+.g-icon{
+  width: 1em; height: 1em;
+}
 </style>

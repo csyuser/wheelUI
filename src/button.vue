@@ -3,7 +3,8 @@
 <!--    <svg v-if="icon" class="icon" aria-hidden="true">-->
 <!--      <use :xlink:href="`#i-${icon}`" />-->
 <!--    </svg>-->
-    <w-icon :icon="icon"></w-icon>
+    <w-icon class="icon loading" name="loading"></w-icon>
+    <w-icon class="icon" v-if="icon" :name="icon"></w-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -28,6 +29,10 @@ export default {
 
 
 <style lang="scss">
+@keyframes spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}
 .w-button {
   height: var(--button-height);
   font-size: var(--font-size);
@@ -52,6 +57,9 @@ export default {
   &.icon-right {
     > .icon {order: 2; margin: 0 0 0 .3em;}
     > .content {order: 1;}
+  }
+  .loading{
+    animation:spin 2s infinite linear;
   }
 }
 </style>
