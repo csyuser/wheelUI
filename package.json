@@ -21,10 +21,9 @@
     "url": "git@gitee.com:chen_pi_pi/wheel-ui.git"
   },
   "alias": {
-    "vue" : "./node_modules/vue/dist/vue.common.js"
+    "vue": "./node_modules/vue/dist/vue.common.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC"
 }
-
