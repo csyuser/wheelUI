@@ -16,17 +16,17 @@
 export default {
   props: {
     icon:{},
-  iconPosition:{
+    iconPosition:{
     type:String,
     default:'left',
     validator(value){
      return (value==='right' || value === 'left')
     }
-  },
+    },
     loadings:{
       type:Boolean,
       default: false
-    }
+    },
   },
 };
 </script>
