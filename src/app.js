@@ -106,8 +106,8 @@ try{
 }catch (error){
   window.errors = [error]
 }finally {
-  window.errors && window.errors.each((error)=>{
-    console.error(error.msg)
+  window.errors && window.errors.forEach((error)=>{
+    console.error(error.message)
   })
 }
 
