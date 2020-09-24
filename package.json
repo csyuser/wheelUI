@@ -1,9 +1,10 @@
 {
-  "name": "wheel-ui",
-  "version": "1.0.0",
+  "name": "ui-9-24",
+  "version": "0.0.2",
   "description": "- name:wheelUI - description:一款简单的UI造轮子",
-  "main": "button.js",
+  "main": "dist/index.js",
   "dependencies": {
+    "user": "0.0.0",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
