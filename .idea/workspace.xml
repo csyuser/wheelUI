@@ -28,12 +28,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9ed26b-6646-4f64-b493-04566c732732" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button-group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button-group.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -77,7 +79,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,18 +135,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601274749675" />
-    <state x="359" y="162" key="SettingsEditor" timestamp="1600786469425">
+    <state x="359" y="162" key="SettingsEditor" timestamp="1601279897205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600670926541" />
+    <state x="359" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601279897205" />
     <state x="359" y="162" key="SettingsEditor/1920.481.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600786469425" />
     <state x="663" y="124" width="594" height="792" key="find.popup" timestamp="1600307681811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="124" width="594" height="792" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600307681811" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600669972856">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601279840890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600669972856" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601279840890" />
   </component>
 </project>

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 export default {
-name: "w-button-group",
+name: "wheelButtonGroup",
   mounted() {
     for (let node of this.$el.children){
       let nodeName = node.nodeName.toLowerCase()
@@ -19,7 +19,7 @@ name: "w-button-group",
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .w-button-group{
   display: inline-flex;
   vertical-align: middle;

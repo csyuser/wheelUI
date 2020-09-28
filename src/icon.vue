@@ -8,7 +8,7 @@
 import './svg.js'
 
 export default {
-name: "w-icon",
+name: "wheelIcon",
   props:{
     name:{},
   }
