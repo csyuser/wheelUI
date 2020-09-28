@@ -27,7 +27,7 @@ export default {
 ```
 3. 添加CSS样式
 - 使用本框架前请开启border-box样式
-- IE8及以上版本浏览器支持
+- IE8及以上版本浏览器支持此样式
 ```
 *,*::before,*::after{
     box-sizing:border-box
