@@ -52,8 +52,22 @@ describe('Input', () => {
       }).$mount()
       const useElement = vm.$el.querySelector('use')
       expect(useElement.getAttribute('xlink:href')).to.equal('#i-error')
-      const errorMessage = vm.$el.querySelector('.errorMessage')
-      expect(errorMessage.innerText).to.equal('你错了')
+      expect(vm.$el.querySelector('.errorMessage').innerText).to.equal('你错了')
     })
+  })
+  describe('事件',()=>{
+    const Constructor = Vue.extend(Input)
+    let vm
+    afterEach(()=>{
+      vm.$destroy()
+    })
+
+    // it('支持事件change/input/focus/blur', () => {
+    //   vm = new Constructor({}).$mount()
+    //   const callback = sinon.fake()
+    //   vm.$on('click', callback)
+    //   vm.$el.click()
+    //   expect(callback).to.have.been.called
+    // })
   })
 })
