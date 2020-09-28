@@ -1,6 +1,6 @@
 
 ## wheelUI，一款简单的UI造轮子
-[![Build Status](https://www.travis-ci.org/csyuser/wheelUI.svg?branch=dev)](https://www.travis-ci.org/csyuser/wheelUI)
+[![Build Status](https://www.travis-ci.org/csyuser/wheelUI.svg?branch=master)](https://www.travis-ci.org/csyuser/wheelUI)
 ## 介绍
 - name:wheelUI
 - description:一款简单的UI造轮子
