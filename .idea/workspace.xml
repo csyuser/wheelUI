@@ -28,9 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9ed26b-6646-4f64-b493-04566c732732" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/wheelUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wheelUI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,10 @@
       <workItem from="1600842160274" duration="191000" />
       <workItem from="1600842361858" duration="1504000" />
       <workItem from="1600843880110" duration="4542000" />
-      <workItem from="1600913492367" duration="12718000" />
+      <workItem from="1600913492367" duration="14553000" />
+      <workItem from="1600994629302" duration="3402000" />
+      <workItem from="1601167053883" duration="4284000" />
+      <workItem from="1601253087359" duration="4059000" />
     </task>
     <servers />
   </component>
@@ -119,10 +123,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600935750701">
+    <state x="698" y="314" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600938103147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600935750701" />
+    <state x="698" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600938103147" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601274749675">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601274749675" />
     <state x="359" y="162" key="SettingsEditor" timestamp="1600786469425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
