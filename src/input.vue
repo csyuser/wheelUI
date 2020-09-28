@@ -9,8 +9,12 @@
 </template>
 
 <script>
+import Icon from './icon'
 export default {
   name: 'WheelInput',
+  components:{
+    'w-icon':Icon
+  },
   props:{
     value:{
       type:String
