@@ -4,6 +4,8 @@
   "description": "- name:wheelUI - description:一款简单的UI造轮子",
   "main": "dist/index.js",
   "dependencies": {
+    "global": "^4.4.0",
+    "open": "^7.2.1",
     "user": "0.0.0",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
