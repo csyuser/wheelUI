@@ -69,9 +69,7 @@ describe('Input', () => {
           const callback = sinon.fake()
           vm.$on(eventName, callback)   //触发change事件后执行callback函数
           const inputElement = vm.$el.querySelector('input')
-          let event = new Event(eventName)  //创建change事件,等价于下面两行代码
-          // let event = document.createEvent('Event');
-          // event.initEvent('change', true, true);
+          let event = new Event(eventName)  //创建change事件
           Object.defineProperty(  //设置event.target的值
             event, 'target', {
               value: {value: 'hi'}, enumerable: true
