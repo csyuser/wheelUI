@@ -10,10 +10,10 @@ describe('Input', () => {
     expect(Input).to.be.ok
   })
 
-  describe('props',()=>{
+  describe('props', () => {
     const Constructor = Vue.extend(Input)
     let vm
-    afterEach(()=>{
+    afterEach(() => {
       vm.$destroy()
     })
 
@@ -55,26 +55,31 @@ describe('Input', () => {
       expect(vm.$el.querySelector('.errorMessage').innerText).to.equal('你错了')
     })
   })
-  describe('事件',()=>{
+  describe('事件', () => {
     const Constructor = Vue.extend(Input)
     let vm
-    afterEach(()=>{
+    afterEach(() => {
       vm.$destroy()
     })
 
     it('支持事件change/input/focus/blur', () => {
       ['change', 'input', 'focus', 'blur']
-        .forEach((eventName)=>{
-        vm = new Constructor({}).$mount()
-        const callback = sinon.fake()
-        vm.$on(eventName, callback)   //触发change事件后执行callback函数
-        const inputElement = vm.$el.querySelector('input')
-        let event = new Event(eventName);  //创建change事件,等价于下面两行代码
-        // let event = document.createEvent('Event');
-        // event.initEvent('change', true, true);
-        inputElement.dispatchEvent(event)  //触发change事件
-        expect(callback).to.have.been.calledWith(event)  //验证event是否作为参数传到父组件了
-      })
+        .forEach((eventName) => {
+          vm = new Constructor({}).$mount()
+          const callback = sinon.fake()
+          vm.$on(eventName, callback)   //触发change事件后执行callback函数
+          const inputElement = vm.$el.querySelector('input')
+          let event = new Event(eventName)  //创建change事件,等价于下面两行代码
+          // let event = document.createEvent('Event');
+          // event.initEvent('change', true, true);
+          Object.defineProperty(  //设置event.target的值
+            event, 'target', {
+              value: {value: 'hi'}, enumerable: true
+            }
+          )
+          inputElement.dispatchEvent(event)  //触发change事件
+          expect(callback).to.have.been.calledWith('hi')  //验证event是否作为参数传到父组件了
+        })
     })
   })
 })
