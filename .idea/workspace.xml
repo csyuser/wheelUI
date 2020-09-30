@@ -28,7 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9ed26b-6646-4f64-b493-04566c732732" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/row.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -101,7 +103,8 @@
       <workItem from="1600994629302" duration="3402000" />
       <workItem from="1601167053883" duration="4284000" />
       <workItem from="1601253087359" duration="4744000" />
-      <workItem from="1601339729573" duration="10747000" />
+      <workItem from="1601339729573" duration="12523000" />
+      <workItem from="1601426048533" duration="2064000" />
     </task>
     <servers />
   </component>
@@ -134,6 +137,10 @@
     </state>
     <state x="359" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601279897205" />
     <state x="359" y="162" key="SettingsEditor/1920.481.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600786469425" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601426435096">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601426435096" />
     <state x="663" y="124" width="594" height="792" key="find.popup" timestamp="1600307681811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

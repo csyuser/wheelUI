@@ -44,7 +44,10 @@
 <body>
 <div id="app">
   <div class="box">
-    <w-input value="张三" @change="inputChange"></w-input>
+    <w-input value="正常" @change="inputChange"></w-input>
+    <w-input value="disable" disable></w-input>
+    <w-input value="readonly" readonly></w-input>
+    <w-input value="error" error="姓名不能少于两个字"></w-input>
   </div>
   <w-button :loadings="loading1">按钮</w-button>
   <w-button :loadings="loading1" @click="loading1 = !loading1" icon="settings">按钮</w-button>
