@@ -46,6 +46,7 @@ $border-radius: 4px;
 $box-shadow-color: rgba(0, 0, 0, 0.3);
 $red: #F1453D;
 $color:#333;
+
 .wrapper {
   font-size: $font-size;
   display: inline-flex;
@@ -53,12 +54,15 @@ $color:#333;
   align-items: center;
   padding: 5px 0;
   color: $color;
+  vertical-align: middle;
+
   > :not(:last-child){margin-right: 0.5em;}
   > input {
     height: $height;font-size:inherit;border: 1px solid $border-color;border-radius: $border-radius;padding: 0 8px; color: inherit;
     &:hover { border-color: $border-color-hover; }
     &:focus{outline: none; box-shadow:inset 0 1px 1px $box-shadow-color}
-    &[disabled],&[readonly]{color: #bbb;border-color: #bbb;cursor: not-allowed}
+    &[disabled]{color: #bbb;border-color: #bbb;cursor: not-allowed}
+    &[readonly]{color: #bbb;border-color: #bbb;}
   }
   &.error{
   > input{border-color: $red}
