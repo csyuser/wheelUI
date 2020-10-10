@@ -45,31 +45,31 @@
 <body>
 <div id="app">
   <div class="row">
-    <p>默认样式</p>
+    <p>1. 默认样式</p>
     <w-row>
       <w-col span="2"><div class="col-content">1</div></w-col>
       <w-col span="22"><div class="col-content">2</div></w-col>
     </w-row>
-    <p>align，默认靠左</p>
+    <p>2. align，默认靠左</p>
     <w-row gutter="20"  align="left">
       <w-col><div class="col-content">1</div></w-col>
       <w-col><div class="col-content">2</div></w-col>
     </w-row>
-    <p>响应式布局,默认手机端</p>
+    <p>3. 响应式布局,默认手机端</p>
     <w-row gutter="20">
       <w-col span="24" :pc="{span:4}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">1</div></w-col>
       <w-col span="24" :pc="{span:4}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">2</div></w-col>
       <w-col span="24" :pc="{span:6}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">3</div></w-col>
       <w-col span="24" :pc="{span:8,offset:2}" :widepc="{span:6,offset:0}" :narrowpc="{span:6}"><div class="col-content">4</div></w-col>
     </w-row>
-    <p>gutter等于20</p>
+    <p>4. gutter等于20</p>
     <w-row gutter="20">
       <w-col span="2"><div class="col-content">1</div></w-col>
       <w-col span="4"><div class="col-content">2</div></w-col>
       <w-col span="6" offset="4"><div class="col-content">3</div></w-col>
       <w-col span="8"><div class="col-content">4</div></w-col>
     </w-row>
-    <p>gutter等于20，offset等于2</p>
+    <p>5. gutter等于20，offset等于2</p>
     <w-row gutter="20">
       <w-col span="2"><div class="col-content">1</div></w-col>
       <w-col span="2"><div class="col-content">2</div></w-col>
