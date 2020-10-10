@@ -31,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/col.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/row.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,8 @@
       <workItem from="1601167053883" duration="4284000" />
       <workItem from="1601253087359" duration="4744000" />
       <workItem from="1601339729573" duration="10747000" />
-      <workItem from="1602204486569" duration="21820000" />
+      <workItem from="1602204486569" duration="23080000" />
+      <workItem from="1602289929759" duration="4895000" />
     </task>
     <servers />
   </component>
@@ -141,10 +143,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601274749675" />
-    <state x="359" y="162" key="SettingsEditor" timestamp="1601279897205">
+    <state x="359" y="162" key="SettingsEditor" timestamp="1602291156406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601279897205" />
+    <state x="359" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602291156406" />
     <state x="359" y="162" key="SettingsEditor/1920.481.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600786469425" />
     <state x="663" y="124" width="594" height="792" key="find.popup" timestamp="1602232227738">
       <screen x="0" y="0" width="1920" height="1040" />

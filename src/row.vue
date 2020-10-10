@@ -39,6 +39,7 @@ export default {
 <style scoped lang="scss">
 .row{
   display: flex;
+  flex-wrap: wrap;
   &:nth-child(n){margin-bottom: 5px;}
   &.align-left{ justify-content: flex-start;}
   &.align-right{ justify-content: flex-end;}
