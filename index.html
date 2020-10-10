@@ -34,20 +34,61 @@
     }
 
     body {
-      font-size: var(--font-size);
+      /*font-size: var(--font-size);*/
+      font-size: 14px;
     }
+    p{padding: 10px 0;
+    font-weight: bold}
   </style>
-  <style>
 
-  </style>
 </head>
 <body>
 <div id="app">
+  <div class="row">
+    <p>1. 默认样式</p>
+    <w-row>
+      <w-col span="2"><div class="col-content">1</div></w-col>
+      <w-col span="22"><div class="col-content">2</div></w-col>
+    </w-row>
+    <p>2. align，默认靠左</p>
+    <w-row gutter="20"  align="left">
+      <w-col><div class="col-content">1</div></w-col>
+      <w-col><div class="col-content">2</div></w-col>
+    </w-row>
+    <p>3. 响应式布局,默认手机端</p>
+    <w-row gutter="20">
+      <w-col span="24" :pc="{span:4}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">1</div></w-col>
+      <w-col span="24" :pc="{span:4}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">2</div></w-col>
+      <w-col span="24" :pc="{span:6}" :widepc="{span:6}" :narrowpc="{span:6}"><div class="col-content">3</div></w-col>
+      <w-col span="24" :pc="{span:8,offset:2}" :widepc="{span:6,offset:0}" :narrowpc="{span:6}"><div class="col-content">4</div></w-col>
+    </w-row>
+    <p>4. gutter等于20</p>
+    <w-row gutter="20">
+      <w-col span="2"><div class="col-content">1</div></w-col>
+      <w-col span="4"><div class="col-content">2</div></w-col>
+      <w-col span="6" offset="4"><div class="col-content">3</div></w-col>
+      <w-col span="8"><div class="col-content">4</div></w-col>
+    </w-row>
+    <p>5. gutter等于20，offset等于2</p>
+    <w-row gutter="20">
+      <w-col span="2"><div class="col-content">1</div></w-col>
+      <w-col span="2"><div class="col-content">2</div></w-col>
+      <w-col span="4"><div class="col-content">3</div></w-col>
+      <w-col span="6"><div class="col-content">4</div></w-col>
+      <w-col span="8" offset="2"><div class="col-content">5</div></w-col>
+    </w-row>
+  </div>
   <div class="box">
+<<<<<<< HEAD
     <w-input value="正常" @change="inputChange"></w-input>
     <w-input value="disable" disable></w-input>
     <w-input value="readonly" readonly></w-input>
     <w-input value="error" error="姓名不能少于两个字"></w-input>
+=======
+    <w-input value="张三" @change="inputChange"></w-input>
+    <w-input value="disable" disable></w-input>
+    <w-input value="readonly" readonly></w-input>
+>>>>>>> grid
   </div>
   <w-button :loadings="loading1">按钮</w-button>
   <w-button :loadings="loading1" @click="loading1 = !loading1" icon="settings">按钮</w-button>
