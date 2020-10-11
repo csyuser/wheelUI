@@ -40,10 +40,48 @@
     p{padding: 10px 0;
     font-weight: bold}
   </style>
+  <style>
+    .demo{
+        min-height: 50px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header{
+        background: #7dbcea;
+    }
+    .content{
+        background: #108ee9;
+    }
+    .footer{
+        background: #7dbcea;
+    }
+    .side{
+        background: #3ba0e9;
+    }
+  </style>
 
 </head>
 <body>
 <div id="app">
+  <div class="layout">
+    <p>1. 上中下</p>
+    <w-layout style="height: 200px">
+      <w-header class="demo header">header</w-header>
+      <w-content class="demo content">content</w-content>
+      <w-footer class="demo footer">footer</w-footer>
+    </w-layout>
+    <p>2. 上-左右-下</p>
+    <w-layout style="height: 200px">
+      <w-header class="demo header">header</w-header>
+      <w-layout>
+        <w-side class="demo side">side</w-side>
+        <w-content class="demo content">content</w-content>
+      </w-layout>
+      <w-footer class="demo footer">footer</w-footer>
+    </w-layout>
+  </div>
   <div class="row">
     <p>1. 默认样式</p>
     <w-row>
@@ -71,7 +109,7 @@
     </w-row>
     <p>5. gutter等于20，offset等于2</p>
     <w-row gutter="20">
-      <w-col span="2"><div class="col-content">1</div></w-col>show navigation bar
+      <w-col span="2"><div class="col-content">1</div></w-col>
       <w-col span="2"><div class="col-content">2</div></w-col>
       <w-col span="4"><div class="col-content">3</div></w-col>
       <w-col span="6"><div class="col-content">4</div></w-col>
