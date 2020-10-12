@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .content{
   flex-grow: 1;
 }
