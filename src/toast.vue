@@ -26,7 +26,7 @@ export default {
       type:Object,
       default(){
         return{
-          auto:false,callback:undefined
+          auto:true,callback:undefined
         }
       }
     },

@@ -32,9 +32,6 @@ new Vue({
   data: {
     loading1: false,
   },
-  mounted(){
-    this.showToast()
-  },
   methods:{
     inputChange(e){
       // console.log(e)
