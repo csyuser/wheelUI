@@ -40,7 +40,7 @@ new Vue({
       // console.log(e)
     },
     showToast(){
-      this.$toast('我是toast message',{closeButton:{text: 'lalal',callback:this.log}})
+      this.$toast('<strong>我是加粗的toast信息</strong>',{closeButton:{text: 'ok啦',callback:this.log},isHtml:true})
     },
     log(){
       console.log('执行了关闭的callback')

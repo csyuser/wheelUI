@@ -1,7 +1,10 @@
 <template>
   <div class="toast">
     <div class="message">
-      <span class="slot"><slot></slot></span>
+      <div class="slot">
+        <slot v-if="!isHtml"></slot>
+        <div v-else v-html="$slots.default"></div>
+      </div>
       <div class="close" v-if="closeButton" @click="clickClose">{{closeButton.text}}</div>
     </div>
   </div>
@@ -30,6 +33,10 @@ export default {
     autoCloseDelay:{
       type:Number,
       default:3
+    },
+    isHtml:{
+      type:Boolean,
+      default:false
     }
   },
   mounted(){
