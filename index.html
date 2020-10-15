@@ -34,12 +34,15 @@
     }
 
     body {
-      /*font-size: var(--font-size);*/
+      font-size: var(--font-size);
       font-size: 14px;
     }
 
     p {padding: 10px 0;
       font-weight: bold}
+    h3{
+      margin: 20px 0;
+    }
   </style>
   <style>
     .demo {
@@ -74,7 +77,12 @@
 </head>
 <body>
 <div id="app">
+  <div class="toast">
+    <h3>Toast</h3>
+    <w-button @click="showToast">toast</w-button>
+  </div>
   <div class="layout">
+    <h3>layout 布局</h3>
     <p>1. 上-左右-下</p>
     <w-layout style="height: 200px">
       <w-header class="demo header">header</w-header>
@@ -98,6 +106,7 @@
     </w-layout>
   </div>
   <div class="row">
+    <h3>grid 网格</h3>
     <p>1. 默认样式</p>
     <w-row>
       <w-col span="2">
@@ -166,12 +175,14 @@
     </w-row>
   </div>
   <div class="box">
+    <h3>输入框</h3>
     <w-input value="正常" @change="inputChange"></w-input>
     <w-input value="disable" disable></w-input>
     <w-input value="readonly" readonly></w-input>
     <w-input value="error" error="姓名不能少于两个字"></w-input>
   </div>
   <div class="button">
+    <h3>按钮</h3>
     <w-button :loadings="loading1">按钮</w-button>
     <w-button :loadings="loading1" @click="loading1 = !loading1" icon="settings">按钮</w-button>
     <w-button :loadings="loading1" icon-position="right" icon="settings">按钮</w-button>

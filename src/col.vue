@@ -40,13 +40,6 @@ export default {
         ...createClasses(widepc,'widepc-'),
         ...createClasses(largepc,'largepc-')
 
-        // span && `col-${span}`,
-        // offset && `offset-${offset}`,
-        // ipad && `col-ipad-${ipad.span}`,
-        // narrowpc && `col-narrowpc-${narrowpc.span}`,
-        // pc && `col-pc-${pc.span}`,
-        // widepc && `col-widepc-${widepc.span}`,
-        // largepc && `col-widepc-${largepc.span}`,
       ]
     },
     colStyle() {
