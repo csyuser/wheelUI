@@ -32,12 +32,18 @@ new Vue({
   data: {
     loading1: false,
   },
+  mounted(){
+    this.showToast()
+  },
   methods:{
     inputChange(e){
-      console.log(e)
+      // console.log(e)
     },
     showToast(){
-      this.$toast('我是toast message')
+      this.$toast('我是toast message',{closeButton:{text: 'lalal',callback:this.log}})
+    },
+    log(){
+      console.log('执行了关闭的callback')
     }
   }
 })
