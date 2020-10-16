@@ -5,7 +5,7 @@
         <slot v-if="!isHtml"></slot>
         <div v-else v-html="$slots.default"></div>
       </div>
-      <div class="close" v-if="closeButton" @click="clickClose">{{closeButton.text}}</div>
+      <div class="close" v-if="closeButton" @click="clickClose"><span>{{closeButton.text}}</span></div>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
     },
     autoCloseDelay:{
       type:Number,
-      default:3
+      default:5
     },
     isHtml:{
       type:Boolean,
@@ -82,6 +82,10 @@ $toast-padding:10px;
     >.close{
       border-left: 1px solid #666666;
       padding: $toast-padding;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
     }
   }
 }
