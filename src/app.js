@@ -36,8 +36,14 @@ new Vue({
     inputChange(e){
       // console.log(e)
     },
-    showToast(){
-      this.$toast('我是toast信息',{closeButton:{text: 'ok啦',callback:this.log}})
+    toastTop(){
+      this.$toast('我是toast信息 上',{closeButton:{text: 'ok啦',callback:this.log},position:'top',autoClose:{auto: false}})
+    },
+    toastMiddle(){
+      this.$toast('我是toast信息 中',{closeButton:{text: 'ok啦',callback:this.log},position:'middle',autoClose:{auto: false}})
+    },
+    toastBottom(){
+      this.$toast('我是toast信息 下',{closeButton:{text: 'ok啦',callback:this.log},position:'bottom',autoClose:{auto: false}})
     },
     log(){
       console.log('执行了关闭的callback')

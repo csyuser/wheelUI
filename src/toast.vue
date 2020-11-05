@@ -1,5 +1,5 @@
 <template>
-  <div class="toast">
+  <div class="toast" :class="positionClass">
     <div class="message">
       <div class="slot">
         <slot v-if="!isHtml"></slot>
@@ -37,6 +37,18 @@ export default {
     isHtml:{
       type:Boolean,
       default:false
+    },
+    position:{
+      type:String,
+      default:'top',
+      validator(value){
+        return ['top','middle','bottom'].indexOf(value)>=0
+      }
+    }
+  },
+  computed:{
+    positionClass(){
+      return `position-${this.position}`
     }
   },
   mounted(){
@@ -71,7 +83,7 @@ $font-size: 14px;
 $toast-bg: #3c3c3d;
 $toast-padding:10px;
 .toast{
-  position: fixed;top: 0;left: 50%;transform: translateX(-50%);
+  position: fixed;left: 50%;transform: translateX(-50%);
   font-size: $font-size;background: $toast-bg;color: #ffffff;
   border-radius: 4px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
   >.message{
@@ -88,5 +100,11 @@ $toast-padding:10px;
       align-items: center;
     }
   }
+  &.position-top{top: 0;}
+  &.position-middle{
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &.position-bottom{bottom: 0;}
 }
 </style>
