@@ -12,6 +12,11 @@ import Side from './side'
 import Content from './content'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
 
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
@@ -25,12 +30,18 @@ Vue.component('w-footer', Footer)
 Vue.component('w-side', Side)
 Vue.component('w-content', Content)
 Vue.component('w-toast', Toast)
+Vue.component('w-tabs', Tabs)
+Vue.component('w-tabs-head', TabsHead)
+Vue.component('w-tabs-body', TabsBody)
+Vue.component('w-tabs-item', TabsItem)
+Vue.component('w-tabs-pane', TabsPane)
 Vue.use(plugin)
 
 new Vue({
   el: '#app',
   data: {
     loading1: false,
+    selected:'sports'
   },
   methods:{
     inputChange(e){
@@ -47,7 +58,7 @@ new Vue({
     },
     log(){
       console.log('执行了关闭的callback')
-    }
+    },
   }
 })
 

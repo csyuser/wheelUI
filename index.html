@@ -40,7 +40,8 @@
 
     p {padding: 10px 0;
       font-weight: bold}
-    h3{
+
+    h3 {
       margin: 20px 0;
     }
   </style>
@@ -69,6 +70,7 @@
       background: #3ba0e9;
       min-width: 100px;
     }
+
     .side.side-leave-to {
       /*margin-left: -150px !important;*/
     }
@@ -77,6 +79,24 @@
 </head>
 <body>
 <div id="app">
+  <div class="tabs">
+    <h3>Tabs</h3>
+    <w-tabs :selected="selected">
+      <w-tabs-head>
+        <template slot="actions">
+          <w-button>设置</w-button>
+        </template>
+        <w-tabs-item name="sports">体育</w-tabs-item>
+        <w-tabs-item name="military">军事</w-tabs-item>
+        <w-tabs-item name="finance">财经</w-tabs-item>
+      </w-tabs-head>
+      <w-tabs-body>
+        <w-tabs-pane name="sports">体育相关资讯</w-tabs-pane>
+        <w-tabs-pane name="military">军事相关资讯</w-tabs-pane>
+        <w-tabs-pane name="finance">财经相关资讯</w-tabs-pane>
+      </w-tabs-body>
+    </w-tabs>
+  </div>
   <div class="toast">
     <h3>Toast</h3>
     <w-button @click="toastTop">toast top</w-button>
@@ -96,7 +116,7 @@
     </w-layout>
     <p>2. 左右</p>
     <w-layout style="height: 200px">
-        <w-side class="demo side">side</w-side>
+      <w-side class="demo side">side</w-side>
       <w-layout>
         <w-header class="demo header">header</w-header>
         <w-layout>
