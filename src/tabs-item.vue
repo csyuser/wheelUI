@@ -36,7 +36,7 @@ export default {
   },
   methods:{
     changeSelected(){
-      this.eventBus.$emit('update:selected',this.name)
+      this.eventBus.$emit('update:selected',this.name,this)
     }
   }
 }
@@ -44,16 +44,16 @@ export default {
 
 <style scoped lang="scss">
 .tabs-item {
-  margin-right: 2em;
-  margin-bottom: -3px;
+  margin-right: 1em;
+  padding: 0 0.5em;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
   &:hover{color: #108ee9;}
   &.active {
     color: #108ee9;
-    height: 100%;
-    border-bottom: 2px solid #108ee9;
-    display: flex;
-    align-items: center;
+    font-weight: bold;
   }
 }
 </style>

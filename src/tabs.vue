@@ -27,12 +27,18 @@ export default {
     }
   },
   provide () {
-    return {
-      eventBus: this.eventBus
-    }
+    return {eventBus: this.eventBus}
   },
   mounted() {
-    this.eventBus.$emit('update:selected', this.selected)
+    this.$children.forEach(vm=>{//head
+      if (vm.$options.name === 'WheelTabsHead'){
+        vm.$children.forEach(childVm=>{ //item
+          if (childVm.$options.name === 'WheelTabsItem' && childVm['name'] === this.selected){
+            this.eventBus.$emit('update:selected', this.selected,childVm)
+          }
+        })
+      }
+    })
   },
 }
 </script>

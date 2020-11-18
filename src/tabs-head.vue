@@ -9,20 +9,28 @@
 
 <script>
 export default {
-name: "WheelTabsHead",
+  name: 'WheelTabsHead',
+  inject:['eventBus'],
+  mounted() {
+    this.eventBus.$on('update:selected',(name,vm)=>{
+      console.log(name)
+      console.log(vm)
+    })
+  },
 }
 </script>
 
 <style scoped lang="scss">
-$tab-height:40px;
-.tabs-head{
+$tab-height: 40px;
+.tabs-head {
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
   align-items: center;
   border-bottom: 2px solid #e6e6e6;
   position: relative;
-  > .actions-wrapper{
+
+  > .actions-wrapper {
     margin-left: auto;
   }
 }
