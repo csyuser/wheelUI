@@ -46,11 +46,12 @@ export default {
 .tabs-item {
   margin-right: 2em;
   margin-bottom: -3px;
+  cursor: pointer;
+  &:hover{color: #108ee9;}
   &.active {
     color: #108ee9;
     height: 100%;
     border-bottom: 2px solid #108ee9;
-    vertical-align: middle;
     display: flex;
     align-items: center;
   }
