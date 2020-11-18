@@ -13,7 +13,10 @@ export default {
       type: String | Number,
       required: true
     },
-
+    disabled:{
+      type: Boolean,
+      default:false
+    }
   },
   data() {
     return {
@@ -22,7 +25,10 @@ export default {
   },
   computed: {
     classes() {
-      return {active: this.active}
+      return {
+        active: this.active,
+        disabled: this.disabled
+      }
     }
   },
 
@@ -30,12 +36,11 @@ export default {
     this.eventBus.$on('update:selected', (name) => {
       this.active = this.name === name
     })
-  },
-  mounted() {
-
+    console.log(this.name + this.disabled)
   },
   methods:{
     changeSelected(){
+      if (this.disabled === true){return}
       this.eventBus.$emit('update:selected',this.name,this)
     }
   }
@@ -50,10 +55,15 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
+  color: #333333;
   &:hover{color: #108ee9;}
   &.active {
     color: #108ee9;
     font-weight: bold;
+  }
+  &.disabled{
+    color: grey;
+    cursor: not-allowed;
   }
 }
 </style>
