@@ -1,6 +1,6 @@
 <template>
   <div class="popover-wrap" @click="onclick" ref="popover">
-    <div class="content-wrap" ref="contentWrap" v-if="visible">
+    <div class="content-wrap" ref="contentWrap" v-if="visible" :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrap" class="triggerWrap">
@@ -12,6 +12,15 @@
 <script>
 export default {
   name: 'WheelPopover',
+  props:{
+    position:{
+      type:String,
+      default:'top',
+      validator(value){
+        return ['top','left','right','bottom'].indexOf(value) >= 0
+      }
+    }
+  },
   data() {
     return {
       visible: false
@@ -22,9 +31,20 @@ export default {
       let contentWrap = this.$refs.contentWrap
       document.body.appendChild(contentWrap)
       const {width, height, top, left} = this.$refs.triggerWrap.getBoundingClientRect()
-      // const contentHeight = contentWrap.getBoundingClientRect()['height']
-      contentWrap.style.left = left + window.scrollX + 'px'
-      contentWrap.style.top = top + window.scrollY + 'px'
+      const {height:contentHeight} = contentWrap.getBoundingClientRect()
+      if (this.position === 'top'){
+        contentWrap.style.left = left + window.scrollX + 'px'
+        contentWrap.style.top = top + window.scrollY + 'px'
+      }else if (this.position === 'left'){
+        contentWrap.style.left = left + window.scrollX + 'px'
+        contentWrap.style.top = top + window.scrollY + (height - contentHeight)/2 + 'px'
+      } else if (this.position === 'right'){
+        contentWrap.style.left = left + window.scrollX +width + 'px'
+        contentWrap.style.top = top + window.scrollY + (height - contentHeight)/2 + 'px'
+      }else if (this.position === 'bottom'){
+        contentWrap.style.left = left + window.scrollX  + 'px'
+        contentWrap.style.top = top + window.scrollY + 'px'
+      }
     },
     onclickDocument(e){
       if (this.$refs.popover && this.$refs.popover === e.target || this.$refs.popover.contains(e.target)){return }
@@ -56,6 +76,7 @@ export default {
 <style scoped lang='scss'>
 $border-color:#999999;
 $border-radius:4px;
+$triangleWidth:5px;
 .popover-wrap {
   display: inline-block;
   vertical-align: top;
@@ -68,29 +89,66 @@ $border-radius:4px;
   position:absolute;
   //border: 1px solid $border-color;
   //box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
-  transform: translateY(-100%);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
   background: #ffffff;
   word-break: break-all;
   max-width: 20em;
   border-radius: $border-radius;
   padding: 0.5em 1em;
-  margin-top: -10px;
   &::before,&::after{
     content: '';
     display: block;
-    border:10px solid transparent;
+    border:$triangleWidth solid transparent;
     position: absolute;
-    left: 10px;
   }
-  &::before{
-    top: 100%;
-    border-top-color: $border-color;
+  &.position-top{
+    transform: translateY(-100%);
+    margin-top: -$triangleWidth;
+    &::before{
+      left: 10px;
+      top: 100%;
+      border-top-color: #ffffff;
+    }
+    //&::after{
+    //  top: calc(100% - 1px) ;
+    //  border-top-color: #ffffff;
+    //}
   }
-  &::after{
-    top: calc(100% - 1px) ;
-    border-top-color: #ffffff;
+  &.position-left{
+    transform: translateX(-100%);
+    margin-left: -$triangleWidth;
+    &::before,&::after{
+      top: 50%;
+      transform: translateY(-50%);
+      border-left-color:#ffffff;;
+    }
+    &::before{
+      left: 100%;
+
+    }
+    &::after{
+      left: calc(100% - 1px);
+    }
   }
+  &.position-right{
+    margin-left: $triangleWidth;
+    &::before{
+      top: 50%;
+      transform: translateY(-50%);
+      right: 100%;
+      border-right-color: #ffffff;
+    }
+  }
+  &.position-bottom{
+    transform: translateY(100%);
+    margin-top: $triangleWidth;
+    &::before{
+      bottom: 100%;
+      left: 10px;
+      border-bottom-color: #ffffff;
+    }
+  }
+
 }
 
 </style>
