@@ -81,7 +81,12 @@
 <div id="app">
   <div class="popover">
     <h3>popover</h3>
-    <w-popover></w-popover>
+    <w-popover>
+      <template slot="content">
+        <div>内容</div>
+      </template>
+      <w-button>点我</w-button>
+    </w-popover>
   </div>
   <div class="tabs">
     <h3>Tabs</h3>

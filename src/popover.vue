@@ -1,37 +1,50 @@
 <template>
-  <div class="popover-wrap">{{item}}
-    <w-button @click="xxx">点我</w-button>
-    <w-button @click="yyy">点我2</w-button>
+  <div class="popover-wrap" @click.stop="showContent">
+    <div class="content-wrap" v-if="visible" @click.stop>
+      <slot name="content"></slot>
+    </div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Popover',
+  name: 'WheelPopover',
   data() {
     return {
-      item: {}
+      visible: false
     }
   },
-  methods:{
-    xxx(){
-      console.log('点击了')
-      // this.item[0] = 'xxx'
-      // this.$set(this.item,1,'xxx')
-      this.item = {name:'xxx'}
-      console.log(this.item)
-    },
-    yyy(){
-      console.log('点击了yyy')
-      // this.item[0] = 'xxx'
-      this.$set(this.item,'age','yyy')
-      // this.item.age = 'yyy'
-      console.log(this.item)
+  methods: {
+    showContent() {
+      this.visible = !this.visible
+      if (this.visible === true){
+        this.$nextTick(()=>{
+          let handler = ()=>{
+            console.log('document 隐藏 popover')
+            this.visible = false
+            document.removeEventListener('click',handler)
+          }
+          document.addEventListener('click',handler)
+        })
+      }else {console.log('vm 隐藏 popover')}
     }
   }
 }
 </script>
 
 <style scoped lang='scss'>
+.popover-wrap {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  > .content-wrap{
+    position:absolute;
+    border: 1px solid #999999;
+    bottom: 100%;
+    left: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+}
 
 </style>

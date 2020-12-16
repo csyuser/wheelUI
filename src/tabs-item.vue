@@ -36,7 +36,6 @@ export default {
     this.eventBus.$on('update:selected', (name) => {
       this.active = this.name === name
     })
-    console.log(this.name + this.disabled)
   },
   methods:{
     changeSelected(){
