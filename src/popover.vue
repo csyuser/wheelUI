@@ -12,12 +12,12 @@
 <script>
 export default {
   name: 'WheelPopover',
-  props:{
-    position:{
-      type:String,
-      default:'top',
-      validator(value){
-        return ['top','left','right','bottom'].indexOf(value) >= 0
+  props: {
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'left', 'right', 'bottom'].indexOf(value) >= 0
       }
     }
   },
@@ -27,46 +27,44 @@ export default {
     }
   },
   methods: {
-    positionContent(){
-      let contentWrap = this.$refs.contentWrap
+    positionContent() {
+      const {contentWrap, triggerWrap} = this.$refs
       document.body.appendChild(contentWrap)
-      const {width, height, top, left} = this.$refs.triggerWrap.getBoundingClientRect()
-      const {height:contentHeight} = contentWrap.getBoundingClientRect()
-      if (this.position === 'top'){
-        contentWrap.style.left = left + window.scrollX + 'px'
-        contentWrap.style.top = top + window.scrollY + 'px'
-      }else if (this.position === 'left'){
-        contentWrap.style.left = left + window.scrollX + 'px'
-        contentWrap.style.top = top + window.scrollY + (height - contentHeight)/2 + 'px'
-      } else if (this.position === 'right'){
-        contentWrap.style.left = left + window.scrollX +width + 'px'
-        contentWrap.style.top = top + window.scrollY + (height - contentHeight)/2 + 'px'
-      }else if (this.position === 'bottom'){
-        contentWrap.style.left = left + window.scrollX  + 'px'
-        contentWrap.style.top = top + window.scrollY + 'px'
+      const {width, height, top, left} = triggerWrap.getBoundingClientRect()
+      const {height: contentHeight} = contentWrap.getBoundingClientRect()
+      let position = {
+        top: {left: left + window.scrollX + 'px', top: top + window.scrollY + 'px'},
+        left: {left: left + window.scrollX + 'px', top: top + window.scrollY + (height - contentHeight) / 2 + 'px'},
+        right: {
+          left: left + window.scrollX + width + 'px',
+          top: top + window.scrollY + (height - contentHeight) / 2 + 'px'
+        },
+        bottom: {left: left + window.scrollX + 'px', top: top + window.scrollY + 'px'},
       }
+      contentWrap['style'].left = position[this.position].left
+      contentWrap['style'].top = position[this.position].top
     },
-    onclickDocument(e){
-      if (this.$refs.popover && this.$refs.popover === e.target || this.$refs.popover.contains(e.target)){return }
-      if (this.$refs.contentWrap && this.$refs.contentWrap === e.target || this.$refs.contentWrap.contains(e.target)){return }
+    onclickDocument(e) {
+      if (this.$refs.popover && this.$refs.popover === e.target || this.$refs.popover.contains(e.target)) {return }
+      if (this.$refs.contentWrap && this.$refs.contentWrap === e.target || this.$refs.contentWrap.contains(e.target)) {return }
       this.close()
     },
-    open(){
+    open() {
       this.visible = true
-      this.$nextTick(()=>{
+      this.$nextTick(() => {
         this.positionContent()
-        document.addEventListener('click',this.onclickDocument)
+        document.addEventListener('click', this.onclickDocument)
       })
     },
-    close(){
+    close() {
       this.visible = false
-      document.removeEventListener('click',this.onclickDocument)
+      document.removeEventListener('click', this.onclickDocument)
     },
-    onclick(e){
-      if (this.$refs.triggerWrap.contains(e.target)){
-        if (this.visible === true){
+    onclick(e) {
+      if (this.$refs.triggerWrap.contains(e.target)) {
+        if (this.visible === true) {
           this.close()
-        }else {this.open()}
+        } else {this.open()}
       }
     }
   }
@@ -74,19 +72,21 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-$border-color:#999999;
-$border-radius:4px;
-$triangleWidth:5px;
+$border-color: #999999;
+$border-radius: 4px;
+$triangleWidth: 5px;
 .popover-wrap {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  > .triggerWrap{
+
+  > .triggerWrap {
     display: inline-block;
   }
 }
-.content-wrap{
-  position:absolute;
+
+.content-wrap {
+  position: absolute;
   //border: 1px solid $border-color;
   //box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
@@ -95,54 +95,66 @@ $triangleWidth:5px;
   max-width: 20em;
   border-radius: $border-radius;
   padding: 0.5em 1em;
-  &::before,&::after{
+
+  &::before, &::after {
     content: '';
     display: block;
-    border:$triangleWidth solid transparent;
+    border: $triangleWidth solid transparent;
     position: absolute;
   }
-  &.position-top{
+
+  &.position-top {
     transform: translateY(-100%);
     margin-top: -$triangleWidth;
-    &::before{
+
+    &::before {
       left: 10px;
       top: 100%;
       border-top-color: #ffffff;
     }
+
     //&::after{
     //  top: calc(100% - 1px) ;
     //  border-top-color: #ffffff;
     //}
   }
-  &.position-left{
+
+  &.position-left {
     transform: translateX(-100%);
     margin-left: -$triangleWidth;
-    &::before,&::after{
+
+    &::before, &::after {
       top: 50%;
       transform: translateY(-50%);
-      border-left-color:#ffffff;;
+      border-left-color: #ffffff;;
     }
-    &::before{
+
+    &::before {
       left: 100%;
 
     }
-    &::after{
+
+    &::after {
       left: calc(100% - 1px);
     }
   }
-  &.position-right{
+
+  &.position-right {
     margin-left: $triangleWidth;
-    &::before{
+
+    &::before {
       top: 50%;
       transform: translateY(-50%);
       right: 100%;
       border-right-color: #ffffff;
     }
   }
-  &.position-bottom{
+
+  &.position-bottom {
     transform: translateY(100%);
     margin-top: $triangleWidth;
-    &::before{
+
+    &::before {
       bottom: 100%;
       left: 10px;
       border-bottom-color: #ffffff;
