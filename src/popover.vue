@@ -28,6 +28,7 @@ export default {
     },
     onclickDocument(e){
       if (this.$refs.popover && this.$refs.popover === e.target || this.$refs.popover.contains(e.target)){return }
+      if (this.$refs.contentWrap && this.$refs.contentWrap === e.target || this.$refs.contentWrap.contains(e.target)){return }
       this.close()
     },
     open(){
@@ -53,6 +54,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+$border-color:#999999;
+$border-radius:4px;
 .popover-wrap {
   display: inline-block;
   vertical-align: top;
@@ -63,11 +66,31 @@ export default {
 }
 .content-wrap{
   position:absolute;
-  border: 1px solid #999999;
-  //bottom: 100%;
-  //left: 0;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  //border: 1px solid $border-color;
+  //box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
   transform: translateY(-100%);
+  background: #ffffff;
+  word-break: break-all;
+  max-width: 20em;
+  border-radius: $border-radius;
+  padding: 0.5em 1em;
+  margin-top: -10px;
+  &::before,&::after{
+    content: '';
+    display: block;
+    border:10px solid transparent;
+    position: absolute;
+    left: 10px;
+  }
+  &::before{
+    top: 100%;
+    border-top-color: $border-color;
+  }
+  &::after{
+    top: calc(100% - 1px) ;
+    border-top-color: #ffffff;
+  }
 }
 
 </style>
