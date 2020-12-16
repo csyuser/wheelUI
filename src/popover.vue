@@ -1,9 +1,11 @@
 <template>
   <div class="popover-wrap" @click.stop="showContent">
-    <div class="content-wrap" v-if="visible" @click.stop>
+    <div class="content-wrap" ref="contentWrap" v-if="visible" @click.stop>
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="triggerWrap" class="triggerWrap">
+          <slot></slot>
+    </span>
   </div>
 </template>
 
@@ -20,6 +22,12 @@ export default {
       this.visible = !this.visible
       if (this.visible === true){
         this.$nextTick(()=>{
+          let contentWrap = this.$refs.contentWrap
+          document.body.appendChild(contentWrap)
+          const {width, height, top, left} = this.$refs.triggerWrap.getBoundingClientRect()
+          // const contentHeight = contentWrap.getBoundingClientRect()['height']
+          contentWrap.style.left = left + window.scrollX + 'px'
+          contentWrap.style.top = top + window.scrollY + 'px'
           let handler = ()=>{
             console.log('document 隐藏 popover')
             this.visible = false
@@ -38,13 +46,17 @@ export default {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  > .content-wrap{
-    position:absolute;
-    border: 1px solid #999999;
-    bottom: 100%;
-    left: 0;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  > .triggerWrap{
+    display: inline-block;
   }
+}
+.content-wrap{
+  position:absolute;
+  border: 1px solid #999999;
+  //bottom: 100%;
+  //left: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transform: translateY(-100%);
 }
 
 </style>
