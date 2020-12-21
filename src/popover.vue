@@ -30,7 +30,8 @@ export default {
   },
   data() {
     return {
-      visible: false
+      visible: false,
+      contentHover:false,
     }
   },
   mounted() {
@@ -38,7 +39,7 @@ export default {
       this.$refs.popover.addEventListener('click',this.onclick)
     }else if (this.trigger === 'hover'){
       this.$refs.popover.addEventListener('mouseenter',this.open)
-      this.$refs.popover.addEventListener('mouseleave',this.close)
+      this.$refs.popover.addEventListener('mouseleave',this.leaveHover)
     }
   },
   beforeDestroy() {
@@ -46,7 +47,9 @@ export default {
         this.$refs.popover.removeEventListener('click',this.onclick)
       }else if (this.trigger === 'hover'){
         this.$refs.popover.removeEventListener('mouseenter',this.open)
-        this.$refs.popover.removeEventListener('mouseleave',this.close)
+        this.$refs.popover.removeEventListener('mouseleave',this.leaveHover)
+        this.$refs.contentWrap.removeEventListener('mouseenter',this.open)
+        this.$refs.contentWrap.removeEventListener('mouseleave',this.close)
       }
   },
   methods: {
@@ -72,7 +75,8 @@ export default {
       if (this.$refs.contentWrap && this.$refs.contentWrap === e.target || this.$refs.contentWrap.contains(e.target)) {return }
       this.close()
     },
-    open() {
+    open(e) {
+      if (this.$refs.contentWrap && this.$refs.contentWrap === e.target || this.$refs.contentWrap &&this.$refs.contentWrap.contains(e.target)) {this.contentHover = true }
       this.visible = true
       this.$nextTick(() => {
         this.positionContent()
@@ -81,7 +85,19 @@ export default {
     },
     close() {
       this.visible = false
+      this.contentHover = false
       document.removeEventListener('click', this.onclickDocument)
+    },
+    leaveHover(){
+      if (this.trigger === 'hover'){
+        setTimeout(()=>{
+         if (this.contentHover === false){this.close()}
+        },200)
+      }
+      if (this.visible === true){
+        this.$refs.contentWrap.addEventListener('mouseenter',this.open)
+        this.$refs.contentWrap.addEventListener('mouseleave',this.close)
+      }
     },
     onclick(e) {
       if (this.$refs.triggerWrap.contains(e.target)) {
