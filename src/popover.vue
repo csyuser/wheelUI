@@ -1,7 +1,7 @@
 <template>
   <div class="popover-wrap" ref="popover">
     <div class="content-wrap" ref="contentWrap" v-if="visible" :class="{[`position-${position}`]:true}">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrap" class="triggerWrap">
           <slot></slot>
@@ -154,7 +154,6 @@ $triangleWidth: 5px;
 
     &::before {
       left: 100%;
-
     }
 
     &::after {

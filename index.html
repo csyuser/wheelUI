@@ -82,9 +82,10 @@
   <div class="popover">
     <h3>popover</h3>
     <div class="xxx"  style="overflow: hidden;border: 1px solid green; padding: 5px;">
-      <w-popover trigger="hover">
-        <template slot="content">
+      <w-popover>
+        <template #content="{close}">
           <div>内容</div>
+          <w-button @click="close">点击关闭</w-button>
         </template>
         <w-button>hover触发top</w-button>
       </w-popover>
@@ -100,7 +101,7 @@
         </template>
         <w-button>内容bottom</w-button>
       </w-popover>
-      <w-popover position="left">
+      <w-popover position="left" trigger="hover">
         <template slot="content">
           <div>内容egfszhshtsgdcssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
         </template>
