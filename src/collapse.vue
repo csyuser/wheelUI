@@ -1,12 +1,12 @@
 <template>
-<div class="collapse-wrap">
-  <slot></slot>
-</div>
+  <div class="collapse-wrap">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-name: "WheelCollapse"
+  name: 'WheelCollapse'
 }
 </script>
 
