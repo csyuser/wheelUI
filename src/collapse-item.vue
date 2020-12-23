@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem-wrap">
-    <div class="title" @click="show=!show">{{ title }}</div>
+    <div class="title" @click="showContent">{{ title }}</div>
     <div class="content" v-if="show">
       <slot></slot>
     </div>
@@ -14,11 +14,33 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    name:{
+      type:String,
     }
   },
   data(){
     return{
       show:false
+    }
+  },
+  inject:['eventBus'],
+  mounted() {
+    this.eventBus.$on('update:selected',(names)=>{
+      if (names.indexOf(this.name)>=0){
+       this.show = true
+     }else {
+       this.show = false
+     }
+    })
+  },
+  methods:{
+    showContent(){
+      if (this.show){
+        this.eventBus.$emit('update:removeSelected',this.name)
+      }else {
+        this.eventBus.$emit('update:addSelected',this.name)
+      }
     }
   }
 }
