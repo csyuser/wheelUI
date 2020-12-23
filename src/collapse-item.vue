@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem-wrap">
-    <div class="title" @click="showContent">{{ title }}</div>
+    <div class="title" @click="showContent" :data-name="name">{{ title }}</div>
     <div class="content" v-if="show">
       <slot></slot>
     </div>
@@ -36,6 +36,7 @@ export default {
   },
   methods:{
     showContent(){
+      console.log('点击了标题')
       if (this.show){
         this.eventBus.$emit('update:removeSelected',this.name)
       }else {
