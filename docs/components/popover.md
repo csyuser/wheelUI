@@ -1,7 +1,7 @@
 ---
-title: 按钮 Button
+title: 弹出提示 popover
 ---
-# 按钮
+# Popover
 
 <ClientOnly>
 <button-demo></button-demo>

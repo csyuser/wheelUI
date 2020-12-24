@@ -1,7 +1,7 @@
 ---
-title: 按钮 Button
+title: 布局 layout
 ---
-# 按钮
+# layout
 
 <ClientOnly>
 <button-demo></button-demo>

@@ -1,7 +1,7 @@
 ---
-title: 按钮 Button
+title: 吐司 Toast
 ---
-# 按钮
+# Toast
 
 <ClientOnly>
 <button-demo></button-demo>

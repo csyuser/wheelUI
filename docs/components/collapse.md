@@ -1,7 +1,7 @@
 ---
-title: 按钮 Button
+title: 手风琴 collapse
 ---
-# 按钮
+# collapse
 
 <ClientOnly>
 <button-demo></button-demo>
