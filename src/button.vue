@@ -38,27 +38,28 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "init";
 @keyframes spin {
   0%{transform: rotate(0deg)}
   100%{transform: rotate(360deg)}
 }
 .w-button {
-  height: var(--button-height);
-  font-size: var(--font-size);
-  color: var(--color);
-  background: var(--button-bg);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
+  height: $button-height;
+  font-size: $font-size;
+  color: $color;
+  background: $button-bg;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
   padding: 0 1em;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   &:hover {
-    border: 1px solid var(--border-color-hover);
+    border: 1px solid $border-color-hover;
   }
   &:active {
-    background: var(--button-active-bg);
+    background: $button-active-bg;
   }
   &:focus { outline: none; }
   > .icon { order: 1; margin-right: .3em;}

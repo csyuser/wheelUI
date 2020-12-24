@@ -38,14 +38,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "init";
 $height:32px;
-$font-size:14px;
-$border-color:#999;
-$border-color-hover: #666;
-$border-radius: 4px;
 $box-shadow-color: rgba(0, 0, 0, 0.3);
-$red: #F1453D;
-$color:#333;
 
 .wrapper {
   font-size: $font-size;
