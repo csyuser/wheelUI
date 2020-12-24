@@ -4,5 +4,5 @@ title: 网格 grid
 # layout
 
 <ClientOnly>
-<button-demo></button-demo>
+<grid-demo></grid-demo>
 </ClientOnly>
