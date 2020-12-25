@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/wheelUI/',
   title: 'UI轮子',
   description: 'Just playing around',
   themeConfig: {
