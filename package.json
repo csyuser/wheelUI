@@ -1,6 +1,6 @@
 {
-  "name": "ui-9-24",
-  "version": "0.0.2",
+  "name": "wheelui-1",
+  "version": "1.1.0",
   "description": "- name:wheelUI - description:一款简单的UI造轮子",
   "main": "dist/index.js",
   "dependencies": {

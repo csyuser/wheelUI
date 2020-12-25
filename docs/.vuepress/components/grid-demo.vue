@@ -23,6 +23,14 @@
     </div>
     <div class="left">
       <h3>2. align，默认靠左</h3>
+      <w-row>
+        <w-col>
+          <div class="col-content">1</div>
+        </w-col>
+        <w-col>
+          <div class="col-content">2</div>
+        </w-col>
+      </w-row>
       <w-row align="right">
         <w-col>
           <div class="col-content">1</div>
@@ -133,6 +141,14 @@ export default {
         </w-col>
     `.replace(/\t+| {2,}/g, '').trim(),
       leftContent: `
+<w-row>
+        <w-col>
+          <div class="col-content">1</div>
+        </w-col>
+        <w-col>
+          <div class="col-content">2</div>
+        </w-col>
+      </w-row>
     <w-row align="right">
         <w-col>
           <div class="col-content">1</div>

@@ -1,19 +1,19 @@
 <template>
   <div class="button-wrap">
     <div class="common-use-use">
-      <h3>基础按钮</h3>
+      <h3>1.基础按钮</h3>
       <w-button>按钮</w-button>
       <pre><code>{{ commonContent }}</code></pre>
     </div>
     <div class="icon-button">
-      <h3>带icon的按钮</h3>
+      <h3>2.带icon的按钮</h3>
       <w-button icon="settings">按钮icon</w-button>
       <w-button icon-position="right" icon="settings">按钮在右侧</w-button>
       <w-button :loadings="true" icon="settings">loading按钮</w-button>
       <pre><code>{{ iconContent }}</code></pre>
     </div>
     <div class="button-group">
-      <h3>按钮组</h3>
+      <h3>3.按钮组</h3>
       <w-button-group>
         <w-button icon="left">上一页</w-button>
         <w-button>更多</w-button>

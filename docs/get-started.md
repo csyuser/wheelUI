@@ -5,9 +5,12 @@ title: 快速开始
 ## 开始使用
 1. 安装 wheelUI
 ```
-npm i --save ui-9-24
+yarn add wheeiui-1  //yarn
+npm i --save wheeiui-1 //npm
 ```
 2. 引入
+- 目前只支持按需引入
+- 需要注意的是，css样式需要单独引入（可在main.js里面全局引入）
 ```
 <script>
 import {Button, ButtonGroup, Icon} from 'ui-9-24'
@@ -18,7 +21,7 @@ export default {
   components: {
     'g-button':Button,
     'g-icon': Icon,
-    w-button-group:ButtonGroup
+    'w-button-group':ButtonGroup
   }
 }
 </script>
@@ -30,18 +33,4 @@ export default {
 *,*::before,*::after{
     box-sizing:border-box
 }
-```
-- 你还需要设置颜色变量
-- IE 15 及以上浏览器都支持此样式
-
-```
- $button-height: 32px;
- $font-size: 14px;
- $button-bg: white;
- $button-active-bg: #eee;
- $border-radius: 4px;
- $color: #333;
- $border-color: #999;
- $border-color-hover: #666;
- $red: #F1453D;
 ```
