@@ -1,7 +1,6 @@
 <template>
   <div class="popover">
     <h3>popover</h3>
-    <div class="xxx" style="overflow: hidden;border: 1px solid green; padding: 5px;">
       <w-popover trigger="hover">
         <template #content="{close}">
           <div>内容</div>
@@ -29,7 +28,6 @@
         </template>
         <w-button>内容left</w-button>
       </w-popover>
-    </div>
     <ul>
       <li>trigger设置触发事件，默认click触发，支持hover触发</li>
       <li>可以设置popover的位置，支持left,right,bottom,top，默认top</li>

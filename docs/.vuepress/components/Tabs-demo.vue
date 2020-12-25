@@ -17,7 +17,7 @@
       </w-tabs-body>
     </w-tabs>
     <ul>
-      <li>代码展示</li>
+      <li>name是必须的，也是唯一值,用于标记单个内容</li>
     </ul>
     <pre><code>{{ content }}</code></pre>
   </div>
