@@ -4,5 +4,5 @@ title: 手风琴 collapse
 # collapse
 
 <ClientOnly>
-<button-demo></button-demo>
+<collapse-demo></collapse-demo>
 </ClientOnly>
