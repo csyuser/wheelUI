@@ -103,6 +103,8 @@ $animationDuration:300ms;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
+
   &.position-top {
     top: 0;
     > .toast{
@@ -135,7 +137,6 @@ $animationDuration:300ms;
 
   > .message {
     display: flex;
-
     > .slot {
       padding: $toast-padding;
     }

@@ -4,5 +4,5 @@ title: 吐司 Toast
 # Toast
 
 <ClientOnly>
-<button-demo></button-demo>
+<toast-demo></toast-demo>
 </ClientOnly>
