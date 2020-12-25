@@ -128,7 +128,8 @@ $triangleWidth: 5px;
   position: absolute;
   //border: 1px solid $border-color;
   //box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+
   background: #ffffff;
   word-break: break-all;
   max-width: 20em;
