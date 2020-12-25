@@ -16,7 +16,9 @@
           <div class="col-content">4</div>
         </w-col>
       </w-row>
-      <p>span设置grid占比</p>
+      <ul>
+        <li>span设置grid占比</li>
+      </ul>
       <pre><code>{{ defaultContent }}</code></pre>
     </div>
     <div class="left">
@@ -29,7 +31,9 @@
           <div class="col-content">2</div>
         </w-col>
       </w-row>
-      <p>align设置位置，可以是left，center，right</p>
+      <ul>
+        <li>align设置位置，可以是left，center，right</li>
+      </ul>
       <pre><code>{{ leftContent }}</code></pre>
     </div>
     <div class="reactive">
@@ -48,7 +52,9 @@
           <div class="col-content">4</div>
         </w-col>
       </w-row>
-      <p>默认手机端，pc电脑端，widepc宽屏，narrowpc窄屏</p>
+      <ul>
+        <li>默认手机端，pc电脑端，widepc宽屏，narrowpc窄屏</li>
+      </ul>
       <pre><code>{{ reactiveContent }}</code></pre>
     </div>
     <div class="gutter">
@@ -67,7 +73,9 @@
           <div class="col-content">4</div>
         </w-col>
       </w-row>
-      <p>gutter设置间隙</p>
+      <ul>
+        <li>gutter设置间隙</li>
+      </ul>
       <pre><code>{{ gutterContent }}</code></pre>
     </div>
     <div class="gutter-offset">
@@ -89,7 +97,9 @@
           <div class="col-content">5</div>
         </w-col>
       </w-row>
-      <p>offset设置偏移位置</p>
+      <ul>
+        <li>offset设置偏移位置</li>
+      </ul>
       <pre><code>{{ offsetContent }}</code></pre>
     </div>
   </div>
@@ -164,6 +174,22 @@ export default {
         </w-col>
         <w-col span="8" offset="2">
           <div class="col-content">5</div>
+        </w-col>
+      </w-row>
+    `.replace(/\t+| {2,}/g, '').trim(),
+      gutterContent: `
+     <w-row gutter="20">
+        <w-col span="2">
+          <div class="col-content">1</div>
+        </w-col>
+        <w-col span="4">
+          <div class="col-content">2</div>
+        </w-col>
+        <w-col span="6" offset="4">
+          <div class="col-content">3</div>
+        </w-col>
+        <w-col span="8">
+          <div class="col-content">4</div>
         </w-col>
       </w-row>
     `.replace(/\t+| {2,}/g, '').trim()

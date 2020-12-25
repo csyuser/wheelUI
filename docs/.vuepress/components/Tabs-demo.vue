@@ -16,7 +16,9 @@
         <w-tabs-pane name="finance">财经相关资讯</w-tabs-pane>
       </w-tabs-body>
     </w-tabs>
-    <p>代码展示</p>
+    <ul>
+      <li>代码展示</li>
+    </ul>
     <pre><code>{{ content }}</code></pre>
   </div>
 </template>

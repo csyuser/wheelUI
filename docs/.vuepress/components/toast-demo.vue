@@ -4,7 +4,9 @@
     <w-button @click="toastTop">toast top</w-button>
     <w-button @click="toastMiddle">toast middle</w-button>
     <w-button @click="toastBottom">toast bottom</w-button>
-    <p>代码展示</p>
+    <ul>
+      <li>代码展示</li>
+    </ul>
     <pre><code>{{ content }}</code></pre>
   </div>
 </template>

@@ -26,7 +26,9 @@
           <w-footer class="demo footer">footer</w-footer>
         </w-layout>
       </w-layout>
-      <p>代码展示</p>
+      <ul>
+        <li>代码展示</li>
+      </ul>
       <pre><code>{{ content2 }}</code></pre>
     </div>
   </div>

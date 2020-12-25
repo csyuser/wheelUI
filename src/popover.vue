@@ -48,8 +48,8 @@ export default {
       }else if (this.trigger === 'hover'){
         this.$refs.popover.removeEventListener('mouseenter',this.open)
         this.$refs.popover.removeEventListener('mouseleave',this.leaveHover)
-        this.$refs.contentWrap.removeEventListener('mouseenter',this.open)
-        this.$refs.contentWrap.removeEventListener('mouseleave',this.close)
+        this.$refs.contentWrap && this.$refs.contentWrap.removeEventListener('mouseenter',this.open)
+        this.$refs.contentWrap && this.$refs.contentWrap.removeEventListener('mouseleave',this.close)
       }
   },
   methods: {
