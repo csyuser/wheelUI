@@ -4,5 +4,5 @@ title: 布局 layout
 # layout
 
 <ClientOnly>
-<button-demo></button-demo>
+<layout-demo></layout-demo>
 </ClientOnly>

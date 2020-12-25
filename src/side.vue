@@ -9,8 +9,11 @@
 </template>
 
 <script>
+import Icon from './icon'
+
 export default {
   name: 'wheelSide',
+  components:{'w-icon':Icon},
   data() {
     return {
       show: true
